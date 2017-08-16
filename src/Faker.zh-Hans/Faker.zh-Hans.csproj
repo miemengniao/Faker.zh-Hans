@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>MieMengNiao.Faker.zh-Hans</AssemblyName>
+    <RootNamespace>MieMengNiao.Faker.zh.Hans</RootNamespace>
+  </PropertyGroup>
+
+</Project>
