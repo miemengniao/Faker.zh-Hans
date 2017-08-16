@@ -6,4 +6,8 @@
     <RootNamespace>MieMengNiao.Faker.zh.Hans</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics.Core" Version="3.17.0" />
+  </ItemGroup>
+
 </Project>

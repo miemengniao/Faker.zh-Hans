@@ -10,7 +10,7 @@ namespace MieMengNiao.Faker.zh.Hans
     internal static class RandomNumber
     {
         //todo: Random线程不安全,需要保护
-        private static Random _rnd = new Random();
+        internal static Random _rnd = new Random();
 
 
         public static void ResetSeed(int seed)

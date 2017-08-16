@@ -1,10 +1,13 @@
 ﻿namespace MieMengNiao.Faker.zh.Hans
 {
+    using MathNet.Numerics.Distributions;
+    using System;
+
     public class FakeUser
     {
         public string FullName => FamilyName + FirstName;
 
-        public string FamilyName { get;  }
+        public string FamilyName { get; }
 
         public string FirstName { get; }
 
@@ -31,7 +34,10 @@
             bool isSingle = RandomNumber.Next(1, 1000) < 50;//5%的人名字是单名?
             if (isSingle) FirstName = FirstName.Substring(0, FirstName.Length - 1);
 
-            Age = RandomNumber.Next(0, 75);
+            // 中国现在的年龄中值是37岁,目前采用正态分布计算一个数字,
+            // 可能需要安装中国的年龄分布情况来计算更好
+            int rndAge = (int)Math.Round(Normal.Sample(RandomNumber._rnd, 37, 20));
+            Age = Math.Max(0, rndAge);
         }
 
         #region 预定义姓集合
